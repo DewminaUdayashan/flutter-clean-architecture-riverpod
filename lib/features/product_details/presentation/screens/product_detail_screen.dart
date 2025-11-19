@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/core/theme/extension.dart';
 import 'package:flutter_clean_architecture/features/product_details/presentation/providers/product_detail.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -32,15 +33,12 @@ class ProductDetailScreen extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                Text(
-                  product.title,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
+                Text(product.title, style: context.textTheme.headlineMedium),
                 const SizedBox(height: 8),
                 Text(
                   '\$${product.price}',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
+                  style: context.textTheme.titleLarge?.copyWith(
+                    color: context.colorScheme.primary,
                   ),
                 ),
                 const SizedBox(height: 16),

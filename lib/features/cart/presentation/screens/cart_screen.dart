@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/core/theme/extension.dart';
 import 'package:flutter_clean_architecture/features/cart/presentation/providers/cart.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,7 +15,7 @@ class CartScreen extends ConsumerWidget {
       body: cartState.when(
         data: (state) {
           if (state.items.isEmpty) {
-            return const Center(
+            return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -26,7 +27,9 @@ class CartScreen extends ConsumerWidget {
                   SizedBox(height: 16),
                   Text(
                     'Your cart is empty',
-                    style: TextStyle(fontSize: 18, color: Colors.grey),
+                    style: context.textTheme.bodyMedium?.copyWith(
+                      color: Colors.grey,
+                    ),
                   ),
                 ],
               ),
