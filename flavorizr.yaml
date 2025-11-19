@@ -1,0 +1,18 @@
+ide: vscode
+flavors:
+  prod:
+    app:
+      name: "Riverpod Architecture"
+
+    android:
+      applicationId: "ccom.example.flutter_clean_architecture"  
+    ios:
+      bundleId: "com.example.flutter_clean_architecture"
+  dev:
+    app:
+      name: "Riverpod Architecture Dev"
+  
+    android:
+      applicationId: "com.example.flutter_clean_architecture.dev"
+    ios:
+      bundleId: "com.example.flutter_clean_architecture.dev"
