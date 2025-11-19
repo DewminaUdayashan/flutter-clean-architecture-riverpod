@@ -48,6 +48,7 @@ dev_dependencies:
   riverpod_generator: ^2.4.0
   freezed: ^2.4.7
   json_serializable: ^6.7.1
+  flutter_flavorizr: ^2.4.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
