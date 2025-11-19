@@ -14,7 +14,7 @@ class ProductDetailScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Product Detail'),
+        title: Text(context.l10n.productDetail),
         leading: BackButton(),
       ),
       body: state.when(
@@ -54,13 +54,15 @@ class ProductDetailScreen extends ConsumerWidget {
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: const Row(
+                    child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(Icons.check, color: Colors.white),
                         SizedBox(width: 8),
                         Text(
-                          'Added to Cart',
+                          detailState.isAddedToCart
+                              ? context.l10n.addedToCart
+                              : '',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -74,14 +76,15 @@ class ProductDetailScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(child: Text('Error: $error')),
+        error: (error, stack) =>
+            Center(child: Text(context.l10n.error(error.toString()))),
       ),
       floatingActionButton: state.hasValue && !state.value!.isAddedToCart
           ? FloatingActionButton.extended(
               onPressed: () {
                 ref.read(productDetailProvider(productId).notifier).addToCart();
               },
-              label: const Text('Add to Cart'),
+              label: Text(context.l10n.addToCart),
               icon: const Icon(Icons.add_shopping_cart),
             )
           : null,

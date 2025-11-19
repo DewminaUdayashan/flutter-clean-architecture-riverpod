@@ -1,0 +1,45 @@
+{
+  "@@locale": "en",
+  "products": "Products",
+  "@products": {
+    "description": "Title for products list screen"
+  },
+  "productDetail": "Product Detail",
+  "@productDetail": {
+    "description": "Title for product detail screen"
+  },
+  "cart": "Cart",
+  "@cart": {
+    "description": "Title for cart screen"
+  },
+  "addToCart": "Add to Cart",
+  "@addToCart": {
+    "description": "Button text to add product to cart"
+  },
+  "addedToCart": "Added to Cart",
+  "@addedToCart": {
+    "description": "Text shown when product is already in cart"
+  },
+  "yourCartIsEmpty": "Your cart is empty",
+  "@yourCartIsEmpty": {
+    "description": "Message shown when cart has no items"
+  },
+  "error": "Error: {message}",
+  "@error": {
+    "description": "Generic error message",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorLoadingCart": "Error loading cart: {message}",
+  "@errorLoadingCart": {
+    "description": "Error message when cart fails to load",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  }
+}
