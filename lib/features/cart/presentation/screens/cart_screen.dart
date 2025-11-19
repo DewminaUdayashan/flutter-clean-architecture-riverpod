@@ -11,7 +11,7 @@ class CartScreen extends ConsumerWidget {
     final cartState = ref.watch(cartProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Cart')),
+      appBar: AppBar(title: Text(context.l10n.cart)),
       body: cartState.when(
         data: (state) {
           if (state.items.isEmpty) {
@@ -26,7 +26,7 @@ class CartScreen extends ConsumerWidget {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    'Your cart is empty',
+                    context.l10n.yourCartIsEmpty,
                     style: context.textTheme.bodyMedium?.copyWith(
                       color: Colors.grey,
                     ),
@@ -69,8 +69,9 @@ class CartScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) =>
-            Center(child: Text('Error loading cart: $error')),
+        error: (error, stack) => Center(
+          child: Text(context.l10n.errorLoadingCart(error.toString())),
+        ),
       ),
     );
   }

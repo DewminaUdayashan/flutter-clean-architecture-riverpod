@@ -1,0 +1,45 @@
+{
+  "@@locale": "si",
+  "products": "නිෂ්පාදන",
+  "@products": {
+    "description": "Title for products list screen"
+  },
+  "productDetail": "නිෂ්පාදන විස්තර",
+  "@productDetail": {
+    "description": "Title for product detail screen"
+  },
+  "cart": "කරත්තය",
+  "@cart": {
+    "description": "Title for cart screen"
+  },
+  "addToCart": "කරත්තයට එක් කරන්න",
+  "@addToCart": {
+    "description": "Button text to add product to cart"
+  },
+  "addedToCart": "කරත්තයට එකතු කරන ලදී",
+  "@addedToCart": {
+    "description": "Text shown when product is already in cart"
+  },
+  "yourCartIsEmpty": "ඔබේ කරත්තය හිස් ය",
+  "@yourCartIsEmpty": {
+    "description": "Message shown when cart has no items"
+  },
+  "error": "දෝෂය: {message}",
+  "@error": {
+    "description": "Generic error message",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorLoadingCart": "කරත්තය පූරණය කිරීමේ දෝෂයකි: {message}",
+  "@errorLoadingCart": {
+    "description": "Error message when cart fails to load",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  }
+}
