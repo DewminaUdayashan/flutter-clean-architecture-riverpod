@@ -1,7 +1,8 @@
-import 'package:flutter_clean_architecture/features/cart/data/repository/cart_repository.dart';
 import 'package:flutter_clean_architecture/features/product_details/domain/entities/product_detail_state.dart';
 import 'package:flutter_clean_architecture/features/product_details/domain/usecases/get_product_with_cart_status_usecase.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../cart/data/repository/provider.dart';
 
 part 'product_detail.g.dart';
 

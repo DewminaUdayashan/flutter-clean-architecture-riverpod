@@ -13,7 +13,17 @@ class ProductsListScreen extends ConsumerWidget {
     final productsState = ref.watch(productsProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Products')),
+      appBar: AppBar(
+        title: const Text('Products'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.shopping_cart),
+            onPressed: () {
+              context.push(Routes.cart);
+            },
+          ),
+        ],
+      ),
       body: productsState.when(
         data: (products) => ListView.builder(
           itemCount: products.length,

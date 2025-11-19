@@ -3,6 +3,7 @@ import 'package:flutter_clean_architecture/features/product_details/domain/entit
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../cart/data/repository/provider.dart';
 import '../../../products/data/repository/product_repository.dart';
 import '../../../products/data/repository/provider.dart';
 
