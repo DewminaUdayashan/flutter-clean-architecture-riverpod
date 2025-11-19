@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_clean_architecture/features/products/data/models/product_model.dart';
 
+import '../models/product_model.dart';
 import 'product_repository.dart';
 
 class ProductRepositoryImpl implements ProductRepository {

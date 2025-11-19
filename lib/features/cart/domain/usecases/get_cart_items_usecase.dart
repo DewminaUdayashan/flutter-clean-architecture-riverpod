@@ -1,11 +1,11 @@
-import 'package:flutter_clean_architecture/features/cart/data/repository/cart_repository.dart';
-import 'package:flutter_clean_architecture/features/cart/domain/entities/cart_state.dart';
-import 'package:flutter_clean_architecture/features/products/data/repository/product_repository.dart';
-import 'package:flutter_clean_architecture/features/products/data/repository/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../products/data/repository/product_repository.dart';
+import '../../../products/data/repository/provider.dart';
+import '../../data/repository/cart_repository.dart';
 import '../../data/repository/provider.dart';
+import '../entities/cart_state.dart';
 
 part 'get_cart_items_usecase.g.dart';
 

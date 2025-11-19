@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/features/products/presentation/providers/products.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/router/routes.dart';
 import '../../../../core/theme/extension.dart';
+import '../providers/products.dart';
 
 class ProductsListScreen extends ConsumerWidget {
   const ProductsListScreen({super.key});

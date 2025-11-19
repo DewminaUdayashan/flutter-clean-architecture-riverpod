@@ -10,5 +10,5 @@ void main() {
     (element) => element.name == appFlavor,
   );
 
-  runApp(ProviderScope(child: const App()));
+  runApp(const ProviderScope(child: App()));
 }

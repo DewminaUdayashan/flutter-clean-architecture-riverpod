@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/core/theme/extension.dart';
-import 'package:flutter_clean_architecture/features/product_details/presentation/providers/product_detail.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../../core/theme/extension.dart';
+import '../providers/product_detail.dart';
 
 class ProductDetailScreen extends ConsumerWidget {
   final int productId;
 
-  const ProductDetailScreen({super.key, required this.productId});
+  const ProductDetailScreen({required this.productId, super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -15,7 +16,7 @@ class ProductDetailScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(context.l10n.productDetail),
-        leading: BackButton(),
+        leading: const BackButton(),
       ),
       body: state.when(
         data: (detailState) {
@@ -57,13 +58,13 @@ class ProductDetailScreen extends ConsumerWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.check, color: Colors.white),
-                        SizedBox(width: 8),
+                        const Icon(Icons.check, color: Colors.white),
+                        const SizedBox(width: 8),
                         Text(
                           detailState.isAddedToCart
                               ? context.l10n.addedToCart
                               : '',
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

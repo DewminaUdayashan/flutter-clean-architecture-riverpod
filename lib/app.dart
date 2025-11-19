@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_clean_architecture/l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/router/router.dart';
 import 'flavors.dart';
+import 'l10n/app_localizations.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
@@ -36,7 +36,7 @@ class App extends ConsumerWidget {
           location: BannerLocation.topStart,
           message: F.name,
           color: Colors.green.withAlpha(150),
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             fontWeight: FontWeight.w700,
             fontSize: 12.0,
             letterSpacing: 1.0,

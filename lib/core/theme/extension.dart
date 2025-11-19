@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart'
     show BuildContext, ColorScheme, Theme, ThemeData, TextTheme;
-import 'package:flutter_clean_architecture/l10n/app_localizations.dart';
+
+import '../../l10n/app_localizations.dart';
 
 extension ThemeExtension on BuildContext {
   ThemeData get theme => Theme.of(this);

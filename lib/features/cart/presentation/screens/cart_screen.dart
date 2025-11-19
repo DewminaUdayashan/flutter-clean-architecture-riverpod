@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/core/theme/extension.dart';
-import 'package:flutter_clean_architecture/features/cart/presentation/providers/cart.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../../core/theme/extension.dart';
+import '../providers/cart.dart';
 
 class CartScreen extends ConsumerWidget {
   const CartScreen({super.key});
@@ -19,12 +20,12 @@ class CartScreen extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.shopping_cart_outlined,
                     size: 64,
                     color: Colors.grey,
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     context.l10n.yourCartIsEmpty,
                     style: context.textTheme.bodyMedium?.copyWith(

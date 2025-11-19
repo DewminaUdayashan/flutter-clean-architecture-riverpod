@@ -1,5 +1,6 @@
-import 'package:flutter_clean_architecture/features/products/data/models/product_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../products/data/models/product_model.dart';
 
 part 'cart_state.freezed.dart';
 
