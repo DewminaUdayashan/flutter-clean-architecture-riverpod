@@ -12,7 +12,10 @@ class ProductDetailScreen extends ConsumerWidget {
     final state = ref.watch(productDetailProvider(productId));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Product Detail')),
+      appBar: AppBar(
+        title: const Text('Product Detail'),
+        leading: BackButton(),
+      ),
       body: state.when(
         data: (detailState) {
           final product = detailState.product;

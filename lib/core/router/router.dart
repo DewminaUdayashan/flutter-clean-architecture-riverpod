@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import 'routes.dart';
+
 part 'router.g.dart';
 
 @riverpod
@@ -11,15 +13,17 @@ GoRouter router(Ref ref) {
   return GoRouter(
     routes: [
       GoRoute(
-        path: '/',
+        path: Routes.home,
         builder: (context, state) => const ProductsListScreen(),
-      ),
-      GoRoute(
-        path: '/details/:id',
-        builder: (context, state) {
-          final id = int.parse(state.pathParameters['id']!);
-          return ProductDetailScreen(productId: id);
-        },
+        routes: [
+          GoRoute(
+            path: ':id',
+            builder: (context, state) {
+              final id = int.parse(state.pathParameters['id']!);
+              return ProductDetailScreen(productId: id);
+            },
+          ),
+        ],
       ),
     ],
   );

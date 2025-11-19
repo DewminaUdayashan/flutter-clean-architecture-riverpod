@@ -3,6 +3,8 @@ import 'package:flutter_clean_architecture/features/products/presentation/provid
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/router/routes.dart';
+
 class ProductsListScreen extends ConsumerWidget {
   const ProductsListScreen({super.key});
 
@@ -27,7 +29,7 @@ class ProductsListScreen extends ConsumerWidget {
               title: Text(product.title),
               subtitle: Text('\$${product.price}'),
               onTap: () {
-                context.go('/details/${product.id}');
+                context.push(Routes.productDetails(product.id.toString()));
               },
             );
           },
