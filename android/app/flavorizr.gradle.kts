@@ -8,7 +8,7 @@ android.apply {
     productFlavors {
         create("prod") {
             dimension = "flavor-type"
-            applicationId = "ccom.example.flutter_clean_architecture"
+            applicationId = "com.example.flutter_clean_architecture"
             resValue(type = "string", name = "app_name", value = "Riverpod Architecture")
         }
         create("dev") {
@@ -17,4 +17,6 @@ android.apply {
             resValue(type = "string", name = "app_name", value = "Riverpod Architecture Dev")
         }
     }
+
+    buildFeatures.resValues = true
 }
