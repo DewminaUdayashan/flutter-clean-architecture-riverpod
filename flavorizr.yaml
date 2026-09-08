@@ -5,7 +5,7 @@ flavors:
       name: "Riverpod Architecture"
 
     android:
-      applicationId: "ccom.example.flutter_clean_architecture"  
+      applicationId: "com.example.flutter_clean_architecture"  
     ios:
       bundleId: "com.example.flutter_clean_architecture"
   dev:
@@ -16,3 +16,24 @@ flavors:
       applicationId: "com.example.flutter_clean_architecture.dev"
     ios:
       bundleId: "com.example.flutter_clean_architecture.dev"
+
+# Only the platform-configuration processors. `flutter:app`, `flutter:pages`
+# and `flutter:main` are deliberately excluded: they would overwrite lib/app.dart
+# and scaffold per-flavor entrypoints this template does not use (it reads the
+# flavor from Flutter's built-in `appFlavor` in lib/main.dart instead).
+instructions:
+  - assets:download
+  - assets:extract
+  - android:androidManifest
+  - android:buildGradle
+  - android:flavorizrGradle
+  - android:dummyAssets
+  - ios:xcconfig
+  - ios:buildTargets
+  - ios:schema
+  - ios:plist
+  - ios:launchScreen
+  - ios:dummyAssets
+  - flutter:flavors
+  - ide:config
+  - assets:clean

@@ -1,7 +1,4 @@
-enum Flavor {
-  prod,
-  dev,
-}
+enum Flavor { prod, dev }
 
 class F {
   static late final Flavor appFlavor;
@@ -16,5 +13,4 @@ class F {
         return 'Riverpod Architecture Dev';
     }
   }
-
 }
