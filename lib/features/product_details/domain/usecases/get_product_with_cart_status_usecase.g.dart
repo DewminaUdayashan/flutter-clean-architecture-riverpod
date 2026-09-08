@@ -6,25 +6,56 @@ part of 'get_product_with_cart_status_usecase.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$getProductWithCartStatusUseCaseHash() =>
-    r'1c744a6e5dbc9c8b554a3878021f0b8c6e965d87';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [getProductWithCartStatusUseCase].
 @ProviderFor(getProductWithCartStatusUseCase)
 final getProductWithCartStatusUseCaseProvider =
-    AutoDisposeProvider<GetProductWithCartStatusUseCase>.internal(
-      getProductWithCartStatusUseCase,
-      name: r'getProductWithCartStatusUseCaseProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$getProductWithCartStatusUseCaseHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+    GetProductWithCartStatusUseCaseProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef GetProductWithCartStatusUseCaseRef =
-    AutoDisposeProviderRef<GetProductWithCartStatusUseCase>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class GetProductWithCartStatusUseCaseProvider
+    extends
+        $FunctionalProvider<
+          GetProductWithCartStatusUseCase,
+          GetProductWithCartStatusUseCase,
+          GetProductWithCartStatusUseCase
+        >
+    with $Provider<GetProductWithCartStatusUseCase> {
+  GetProductWithCartStatusUseCaseProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getProductWithCartStatusUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$getProductWithCartStatusUseCaseHash();
+
+  @$internal
+  @override
+  $ProviderElement<GetProductWithCartStatusUseCase> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  GetProductWithCartStatusUseCase create(Ref ref) {
+    return getProductWithCartStatusUseCase(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(GetProductWithCartStatusUseCase value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<GetProductWithCartStatusUseCase>(
+        value,
+      ),
+    );
+  }
+}
+
+String _$getProductWithCartStatusUseCaseHash() =>
+    r'1c744a6e5dbc9c8b554a3878021f0b8c6e965d87';

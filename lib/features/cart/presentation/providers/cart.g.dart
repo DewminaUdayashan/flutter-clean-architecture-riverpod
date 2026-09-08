@@ -6,20 +6,48 @@ part of 'cart.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$cartHash() => r'471bee66d067cc7ee17ba14e9bd8f2f562b2519b';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [Cart].
 @ProviderFor(Cart)
-final cartProvider = AutoDisposeAsyncNotifierProvider<Cart, CartState>.internal(
-  Cart.new,
-  name: r'cartProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$cartHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final cartProvider = CartProvider._();
 
-typedef _$Cart = AutoDisposeAsyncNotifier<CartState>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class CartProvider extends $AsyncNotifierProvider<Cart, CartState> {
+  CartProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'cartProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$cartHash();
+
+  @$internal
+  @override
+  Cart create() => Cart();
+}
+
+String _$cartHash() => r'2b149c496335f78697e38fe848358d99b5c326d2';
+
+abstract class _$Cart extends $AsyncNotifier<CartState> {
+  FutureOr<CartState> build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<CartState>, CartState>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<CartState>, CartState>,
+              AsyncValue<CartState>,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, build);
+  }
+}

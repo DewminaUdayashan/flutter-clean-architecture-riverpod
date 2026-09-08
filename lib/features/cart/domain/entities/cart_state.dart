@@ -5,7 +5,7 @@ import '../../../products/data/models/product_model.dart';
 part 'cart_state.freezed.dart';
 
 @freezed
-class CartItem with _$CartItem {
+abstract class CartItem with _$CartItem {
   const factory CartItem({
     required ProductModel product,
     required int quantity,
@@ -13,6 +13,6 @@ class CartItem with _$CartItem {
 }
 
 @freezed
-class CartState with _$CartState {
+abstract class CartState with _$CartState {
   const factory CartState({required List<CartItem> items}) = _CartState;
 }

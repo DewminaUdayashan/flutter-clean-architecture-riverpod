@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/async/async_value_x.dart';
 import '../../../../core/theme/extension.dart';
 import '../providers/cart.dart';
 
@@ -13,7 +14,7 @@ class CartScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(context.l10n.cart)),
-      body: cartState.when(
+      body: cartState.whenSafe(
         data: (state) {
           if (state.items.isEmpty) {
             return Center(

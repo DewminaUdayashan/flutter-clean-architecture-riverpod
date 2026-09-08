@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/async/async_value_x.dart';
 import '../../../../core/theme/extension.dart';
 import '../providers/product_detail.dart';
 
@@ -18,7 +19,7 @@ class ProductDetailScreen extends ConsumerWidget {
         title: Text(context.l10n.productDetail),
         leading: const BackButton(),
       ),
-      body: state.when(
+      body: state.whenSafe(
         data: (detailState) {
           final product = detailState.product;
           return Padding(

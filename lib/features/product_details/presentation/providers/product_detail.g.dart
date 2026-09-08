@@ -6,169 +6,95 @@ part of 'product_detail.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$productDetailHash() => r'2ad5767bb2df39346e8717af1b3079dae1e49bd3';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-abstract class _$ProductDetail
-    extends BuildlessAutoDisposeAsyncNotifier<ProductDetailState> {
-  late final int productId;
-
-  FutureOr<ProductDetailState> build(int productId);
-}
-
-/// See also [ProductDetail].
 @ProviderFor(ProductDetail)
-const productDetailProvider = ProductDetailFamily();
+final productDetailProvider = ProductDetailFamily._();
 
-/// See also [ProductDetail].
-class ProductDetailFamily extends Family<AsyncValue<ProductDetailState>> {
-  /// See also [ProductDetail].
-  const ProductDetailFamily();
+final class ProductDetailProvider
+    extends $AsyncNotifierProvider<ProductDetail, ProductDetailState> {
+  ProductDetailProvider._({
+    required ProductDetailFamily super.from,
+    required int super.argument,
+  }) : super(
+         retry: null,
+         name: r'productDetailProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
-  /// See also [ProductDetail].
-  ProductDetailProvider call(int productId) {
-    return ProductDetailProvider(productId);
+  @override
+  String debugGetCreateSourceHash() => _$productDetailHash();
+
+  @override
+  String toString() {
+    return r'productDetailProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  ProductDetailProvider getProviderOverride(
-    covariant ProductDetailProvider provider,
-  ) {
-    return call(provider.productId);
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'productDetailProvider';
-}
-
-/// See also [ProductDetail].
-class ProductDetailProvider
-    extends
-        AutoDisposeAsyncNotifierProviderImpl<
-          ProductDetail,
-          ProductDetailState
-        > {
-  /// See also [ProductDetail].
-  ProductDetailProvider(int productId)
-    : this._internal(
-        () => ProductDetail()..productId = productId,
-        from: productDetailProvider,
-        name: r'productDetailProvider',
-        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-            ? null
-            : _$productDetailHash,
-        dependencies: ProductDetailFamily._dependencies,
-        allTransitiveDependencies:
-            ProductDetailFamily._allTransitiveDependencies,
-        productId: productId,
-      );
-
-  ProductDetailProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.productId,
-  }) : super.internal();
-
-  final int productId;
-
-  @override
-  FutureOr<ProductDetailState> runNotifierBuild(
-    covariant ProductDetail notifier,
-  ) {
-    return notifier.build(productId);
-  }
-
-  @override
-  Override overrideWith(ProductDetail Function() create) {
-    return ProviderOverride(
-      origin: this,
-      override: ProductDetailProvider._internal(
-        () => create()..productId = productId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        productId: productId,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeAsyncNotifierProviderElement<ProductDetail, ProductDetailState>
-  createElement() {
-    return _ProductDetailProviderElement(this);
-  }
+  ProductDetail create() => ProductDetail();
 
   @override
   bool operator ==(Object other) {
-    return other is ProductDetailProvider && other.productId == productId;
+    return other is ProductDetailProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, productId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin ProductDetailRef
-    on AutoDisposeAsyncNotifierProviderRef<ProductDetailState> {
-  /// The parameter `productId` of this provider.
-  int get productId;
-}
+String _$productDetailHash() => r'672bc482fc0293b58fa195a4bd297edf6b760ec5';
 
-class _ProductDetailProviderElement
-    extends
-        AutoDisposeAsyncNotifierProviderElement<
+final class ProductDetailFamily extends $Family
+    with
+        $ClassFamilyOverride<
           ProductDetail,
-          ProductDetailState
-        >
-    with ProductDetailRef {
-  _ProductDetailProviderElement(super.provider);
+          AsyncValue<ProductDetailState>,
+          ProductDetailState,
+          FutureOr<ProductDetailState>,
+          int
+        > {
+  ProductDetailFamily._()
+    : super(
+        retry: null,
+        name: r'productDetailProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
+
+  ProductDetailProvider call(int productId) =>
+      ProductDetailProvider._(argument: productId, from: this);
 
   @override
-  int get productId => (origin as ProductDetailProvider).productId;
+  String toString() => r'productDetailProvider';
 }
 
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+abstract class _$ProductDetail extends $AsyncNotifier<ProductDetailState> {
+  late final _$args = ref.$arg as int;
+  int get productId => _$args;
+
+  FutureOr<ProductDetailState> build(int productId);
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref =
+        this.ref as $Ref<AsyncValue<ProductDetailState>, ProductDetailState>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<ProductDetailState>, ProductDetailState>,
+              AsyncValue<ProductDetailState>,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, () => build(_$args));
+  }
+}

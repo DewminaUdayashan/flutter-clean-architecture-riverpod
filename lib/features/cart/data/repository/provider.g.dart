@@ -6,22 +6,46 @@ part of 'provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$cartRepositoryHash() => r'd4dada75301ee1b1faf5da873e84dc5d3188265b';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [cartRepository].
 @ProviderFor(cartRepository)
-final cartRepositoryProvider = Provider<CartRepository>.internal(
-  cartRepository,
-  name: r'cartRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$cartRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final cartRepositoryProvider = CartRepositoryProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef CartRepositoryRef = ProviderRef<CartRepository>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class CartRepositoryProvider
+    extends $FunctionalProvider<CartRepository, CartRepository, CartRepository>
+    with $Provider<CartRepository> {
+  CartRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'cartRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$cartRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<CartRepository> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  CartRepository create(Ref ref) {
+    return cartRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(CartRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<CartRepository>(value),
+    );
+  }
+}
+
+String _$cartRepositoryHash() => r'd4dada75301ee1b1faf5da873e84dc5d3188265b';
